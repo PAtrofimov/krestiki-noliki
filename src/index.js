@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 function Square(props) {
+  const activePrefix = props.active ? "square-active" : "";
   return (
-    <button className="square" onClick={props.onClick}>
+    <button className={"square " + activePrefix} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -50,31 +51,23 @@ class Board extends React.Component {
     return (
       <Square
         value={this.props.squares[i]}
+        active={i === this.props.active}
         onClick={() => this.props.onClick(i)}
       />
     );
   }
 
-  render() {
-    return (
-      <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+  renderBoard() {
+    return [0, 1, 2].map((i) => (
+      <div className="board-row">
+        {[0, 1, 2].map((j) => this.renderSquare(3 * i + j))}
       </div>
-    );
+    ));
+  }
+
+  render() {
+    console.log(this.renderBoard());
+    return <div>{this.renderBoard()}</div>;
   }
 }
 
@@ -124,9 +117,7 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const active = activeCell(step.active);
-      const activeCellText = active
-        ? `(${active.row}, ${active.col})`
-        : "";
+      const activeCellText = active ? `(${active.row}, ${active.col})` : "";
       const desc = move
         ? `Go to step #${move} ${activeCellText}`
         : "Go to start";
@@ -149,6 +140,7 @@ class Game extends React.Component {
         <div className="game-board">
           <Board
             squares={current.squares}
+            active={current.active}
             onClick={(i) => {
               this.handleClick(i);
             }}
