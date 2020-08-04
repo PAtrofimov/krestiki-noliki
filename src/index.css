@@ -1,55 +1,88 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-  
-  ol, ul {
-    padding-left: 30px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  
-  .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
-  
-  .square:focus {
-    outline: none;
-  }
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
 
-  .square-active {
-      color: lightgreen;
-  }
-  
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .game-info {
-    margin-left: 20px;
-  }
-  
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ol > li {
+  list-style: none;
+  margin: 0;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 2.9em;
+  font-weight: bold;
+  line-height: 3em;
+  height: 3em;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 3em;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square-active {
+  color: lightgreen;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-history {
+  display: flex;
+  align-items: center;
+}
+
+.game-history-title {
+  margin-right: 10px;
+}
+
+.win-cell {
+  background-color: lightyellow;
+}
+
+.game-history-status-value {
+  font-size: larger;
+  font-weight: bold;
+  color: magenta;
+  zoom: 2;
+}
+
+.game-history-status {
+  margin-right: 10px;
+  color: brown;
+  font-weight: bold;
+  text-transform: uppercase;
+}
