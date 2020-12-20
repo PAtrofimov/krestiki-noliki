@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/PAtrofimov/krestiki-noliki/static/css/main.6f3c737f.chunk.css",
+    "main.js": "/PAtrofimov/krestiki-noliki/static/js/main.0a771cab.chunk.js",
+    "main.js.map": "/PAtrofimov/krestiki-noliki/static/js/main.0a771cab.chunk.js.map",
+    "runtime-main.js": "/PAtrofimov/krestiki-noliki/static/js/runtime-main.4c02d3c3.js",
+    "runtime-main.js.map": "/PAtrofimov/krestiki-noliki/static/js/runtime-main.4c02d3c3.js.map",
+    "static/js/2.35503916.chunk.js": "/PAtrofimov/krestiki-noliki/static/js/2.35503916.chunk.js",
+    "static/js/2.35503916.chunk.js.map": "/PAtrofimov/krestiki-noliki/static/js/2.35503916.chunk.js.map",
+    "index.html": "/PAtrofimov/krestiki-noliki/index.html",
+    "precache-manifest.b31cd50aabf58cb77b6c59cd949e9d0e.js": "/PAtrofimov/krestiki-noliki/precache-manifest.b31cd50aabf58cb77b6c59cd949e9d0e.js",
+    "service-worker.js": "/PAtrofimov/krestiki-noliki/service-worker.js",
+    "static/css/main.6f3c737f.chunk.css.map": "/PAtrofimov/krestiki-noliki/static/css/main.6f3c737f.chunk.css.map",
+    "static/js/2.35503916.chunk.js.LICENSE.txt": "/PAtrofimov/krestiki-noliki/static/js/2.35503916.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c02d3c3.js",
+    "static/js/2.35503916.chunk.js",
+    "static/css/main.6f3c737f.chunk.css",
+    "static/js/main.0a771cab.chunk.js"
+  ]
+}
